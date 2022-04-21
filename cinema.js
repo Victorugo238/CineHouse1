@@ -1,9 +1,6 @@
-function nomeSobreNome(a){   
-    for(var i = 0; i < a.length; i++){
-
-        console.log(a[i])
-
-    }
-}
-var b = ["victor","Hugo","Da","Silva"]
-console.log(nomeSobreNome(b))
+var catalogo = require("./catalago.json")
+//console.log(catalogo.data)
+var catalogoString = JSON.stringify(catalogo)
+console.log(catalogoString)
+var catalogoObjeto = JSON.parse(catalogoString)
+console.log(catalogoObjeto)
