@@ -33,4 +33,19 @@ function listarFilmesEmCartaz(filmes) {
  // }
   //console.log(listarFilmesEmCartaz(catalogoObj.data));
   
+  function alterarStatusEmCartaz(id, filmes) {
+    const idxFilme = filmes.findIndex((value) => {
+      if (value.codigo === id) {
+        return true;
+      }
+    });
+    if (idxFilme >= 0) {
+      filmes[idxFilme].emCartaz = !filmes[idxFilme].emCartaz;
+      return true;
+    }
+  }
+  
 
+  console.log(alterarStatusEmCartaz(1, catalogoObj.data));
+  console.log(catalogoObj.data);
+  
